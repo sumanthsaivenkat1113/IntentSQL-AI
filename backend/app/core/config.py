@@ -6,6 +6,10 @@ class Settings(BaseSettings):
 
     FRONTEND_URL: str
 
+    GROQ_API_KEY: str
+
+    GROQ_MODEL: str
+
     model_config = SettingsConfigDict(
         env_file=".env",
         extra="forbid",
