@@ -154,7 +154,7 @@ export default function PlaygroundClient() {
               onClick={run}
               disabled={busy || awaiting || !prompt.trim()}
               className={clsx(
-                "flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition",
+                "cursor-pointer flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition",
                 busy || awaiting || !prompt.trim()
                   ? "bg-white/5 text-gray-500 cursor-not-allowed"
                   : "bg-gradient-to-r from-brand-600 to-accent-500 text-white hover:opacity-90"
@@ -191,7 +191,7 @@ export default function PlaygroundClient() {
                   setPrompt(s.prompt);
                 }}
                 disabled={busy || awaiting}
-                className="w-full text-left p-3 rounded-lg bg-white/5 hover:bg-white/10 transition disabled:opacity-50"
+                className="cursor-pointer w-full text-left p-3 rounded-lg bg-white/5 hover:bg-white/10 transition disabled:opacity-50"
               >
                 <div className="flex items-center justify-between mb-1">
                   <span
