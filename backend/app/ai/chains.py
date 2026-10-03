@@ -61,7 +61,7 @@ def generate_sql(user_prompt: str) -> LLMSQL:
         system_prompt=SQL_SYSTEM_PROMPT,
         user_prompt=f"User question: {user_prompt}",
         response_model=LLMSQL,
-        max_completion_tokens=512,
+        max_completion_tokens=800,
         temperature=0.0,
     )
 

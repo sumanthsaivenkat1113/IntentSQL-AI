@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
 
+from app.apis.routes import router
+
 app = FastAPI(
     title="IntentSQL AI API",
 )
@@ -25,6 +27,8 @@ app.add_middleware(
 # Routes
 # ------------------------------------------------------------
 
+app.include_router(router)
+
 # ------------------------------------------------------------
 # Root
 # ------------------------------------------------------------
@@ -33,3 +37,13 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {"message": "IntentSQL AI API is running successfully"}
+
+
+# ------------------------------------------------------------
+# Health
+# ------------------------------------------------------------
+
+
+@app.get("/health")
+def health():
+    return {"success": True, "status": "healthy"}
