@@ -87,6 +87,6 @@ def generate_report(
         system_prompt=ANSWER_SYSTEM_PROMPT,
         user_prompt=payload,
         response_model=LLMReport,
-        max_completion_tokens=1024,
+        max_completion_tokens=400,
         temperature=0.2,
     )
